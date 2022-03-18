@@ -2,7 +2,7 @@
 
 1 Description
 
-In this assignment, you will be implementing a kNN classifier to classify text documents. The implementation will be in Python, on top of Spark.
+In this assignment, you will be implementing a kNN classifier to classify text documents. The implementation will be in Python, on top of Spark.
 You will be asked to perform three subtasks: (1) data preparation, (2) classification, and (3) evaluation.
 
 2 Data
@@ -66,7 +66,7 @@ Again, print out just the non-zero entries.
 3.3 Text 3
 
 Next, your task is to build a kNN classifier, embodied by the Python function predictLabel. This
-function will take as input a text string and a number k, and then output the name of one of the 20 newsgroups. This name is the newsgroup that the classifier thinks that the text string is “closest” to. It is computed
+function will take as input a text string and a number k, and then output the name of one of the 20 news groups. This name is the newsgroup that the classifier thinks that the text string is “closest” to. It is computed
 using the classical kNN algorithm. This algorithm first converts the input string into a TF-IDF vector (using
 the dictionary and count information computed over the original corpus). It then finds the k documents
 in the corpus that are “closest” to the query vector (where distance is computed using the L2 norm), and
@@ -75,6 +75,7 @@ document.
 Once you have written your function, run it on the following (each is an except from a Wikipedia
 article, chosen to match one of the 20 newsgroups). Note that I’ve included these tests on Canvas, for easier
 copy/paste):
+
 predictLabel (10, ’Graphics are pictures and movies created using computers usually referring to image
 data created by a computer specifically with help from specialized graphical hardware and software.
 It is a vast and recent area in computer science. The phrase was coined by computer graphics researchers
@@ -88,6 +89,7 @@ the physical world. The interaction and understanding of computers and interpret
 been made easier because of computer graphics. Computer graphic development has had a significant
 impact on many types of media and has revolutionized animation, movies, advertising, video games, and
 graphic design generally.’)
+
 predictLabel (10, ’A deity is a concept conceived in diverse ways in various cultures, typically as
 a natural or supernatural being considered divine or sacred. Monotheistic religions accept only one
 Deity (predominantly referred to as God), polytheistic religions accept and worship multiple deities,
@@ -99,6 +101,7 @@ god or goddess (in a polytheistic religion), or anything revered as divine. C. S
 a deity as a being with powers greater than those of ordinary humans, but who interacts with humans,
 positively or negatively, in ways that carry humans to new levels of consciousness beyond the grounded
 preoccupations of ordinary life.’)
+
 predictLabel (10, ’Egypt, officially the Arab Republic of Egypt, is a transcontinental country spanning
 the northeast corner of Africa and southwest corner of Asia by a land bridge formed by the Sinai Peninsula.
 Egypt is a Mediterranean country bordered by the Gaza Strip and Israel to the northeast, the Gulf of
@@ -115,6 +118,7 @@ is an integral part of its national identity, which has endured, and at times as
 foreign influences, including Greek, Persian, Roman, Arab, Ottoman, and European. One of the earliest
 centers of Christianity, Egypt was Islamised in the seventh century and remains a predominantly Muslim
 country, albeit with a significant Christian minority.’)
+
 predictLabel (10, ’The term atheism originated from the Greek atheos, meaning without god(s), used
 as a pejorative term applied to those thought to reject the gods worshiped by the larger society. With
 the spread of freethought, skeptical inquiry, and subsequent increase in criticism of religion, application
@@ -136,6 +140,7 @@ International Space Station and is overseeing the development of the Orion Multi
 the Space Launch System and Commercial Crew vehicles. The agency is also responsible for the Launch
 Services Program (LSP) which provides oversight of launch operations and countdown management for unmanned
 NASA launches.’)
+
 predictLabel (10, ’ The transistor is the fundamental building block of modern electronic devices,
 and is ubiquitous in modern electronic systems. First conceived by Julius Lilienfeld in 1926 and practically
 implemented in 1947 by American physicists John Bardeen, Walter Brattain, and William Shockley, the
@@ -143,6 +148,7 @@ transistor revolutionized the field of electronics, and paved the way for smalle
 calculators, and computers, among other things. The transistor is on the list of IEEE milestones in
 electronics, and Bardeen, Brattain, and Shockley shared the 1956 Nobel Prize in Physics for their achievement.
 ’)
+
 predictLabel (10, ’ The Colt Single Action Army which is also known as the Single Action Army, SAA,
 Model P, Peacemaker, M1873, and Colt .45 is a single-action revolver with a revolving cylinder holding
 six metallic cartridges. It was designed for the U.S. government service revolver trials of 1872 by
@@ -153,6 +159,7 @@ has discontinued its production twice, but brought it back due to popular demand
 popular with ranchers, lawmen, and outlaws alike, but as of the early 21st century, models are mostly
 bought by collectors and re-enactors. Its design has influenced the production of numerous other models
 from other companies. ’)
+
 predictLabel (10, ’ Howe was recruited by the Red Wings and made his NHL debut in 1946. He led the
 league in scoring each year from 1950 to 1954, then again in 1957 and 1963. He ranked among the top
 ten in league scoring for 21 consecutive years and set a league record for points in a season (95)
